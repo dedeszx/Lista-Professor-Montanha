@@ -1,19 +1,31 @@
 // Davi Augusto Domingos da Silva Alves
 // RA 1261944157
-
-import java.util.Scanner ;
+import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-    
-    int n1;
-    Scanner entrada = new Scanner(System.in);
-        System.out.println("Programa para falar se o numero é par ou impar");
-        System.out.println("Digite um número inteiro: ");
-        n1 =entrada.nextInt();
-        if (n1%2 == 0) {
-            System.out.println("O número "+n1+" é par");
+        float a;
+        float b;
+        float c;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Programa para ler os lados do triangulo");
+        System.out.println("escreva o lado A: ");
+        a = entrada.nextFloat();
+        System.out.println("escreva o lado B: ");
+        b = entrada.nextFloat();
+        System.out.println("escreva o lado C: ");
+        c = entrada.nextFloat();
+        
+        if (a == b && a == c) {
+            System.out.println("Este é um triângulo equilátero ");
+            
         }
-        else { System.out.println("O número "+n1+" é impar");}
+        else if (a == b || b == c || a == c) {
+            System.out.println(" Este é um triângulo Isóceles");
+
+        }
+        else {
+            System.out.println(" Este é um triângulo escaleno");
+        }
         entrada.close();
     }
 }
